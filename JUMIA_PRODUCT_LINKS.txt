@@ -1,0 +1,28 @@
+TROP Market Uganda — product maintenance list
+Checked: 19 October 2026
+
+All cards in index.html use exact direct Jumia Uganda product URLs. The links are static and need periodic manual checking. Prices and stock on Jumia can change at any time.
+
+Samsung Galaxy A17 — UGX 629,000 snapshot
+https://www.jumia.ug/galaxy-a17-6.7-4gb-ram-128gb-rom-50mp-5000mah-grey-samsung-mpg7275311.html
+
+Samsung Galaxy A06 — UGX 430,000 snapshot
+https://www.jumia.ug/galaxy-a06-6.7-4gb-ram-64gb-rom-50mp-5000mah-black-samsung-mpg7275310.html
+
+Tecno Pop 20 — UGX 482,000 snapshot
+https://www.jumia.ug/tecno-pop-20-6.75-4gb-ram-64gb-rom-13mp-5000mah.-multcolour-259856925.html
+
+FUXING FASHION Men Shoes — UGX 19,635 snapshot
+https://www.jumia.ug/fuxing-fashion-men-shoes-men-sneakers-shoes-95233633.html
+
+STY Men Laptop Backpack — UGX 36,008 snapshot
+https://www.jumia.ug/sty-men-bags-laptop-backpack-male-black-multi-pocket-bag-school-bags-student-bag-259728343.html
+
+Adjustable Movable Laptop Table — UGX 200,000 snapshot
+https://www.jumia.ug/generic-adjustable-movable-laptop-table-black-259746232.html
+
+QBD Skin Care Vitamin C Serum 100ml — UGX 56,000 snapshot
+https://www.jumia.ug/skin-care-vitamin-c-serum-100ml-qbd-mpg7230525.html
+
+GALUIN Soccer Cleats — UGX 59,000 snapshot
+https://www.jumia.ug/galuin-soccer-shoes-mens-cleats-outdoor-professional-training-turf-football-boots-breathable-athletic-sneaker-for-ag-blue-259067120.html

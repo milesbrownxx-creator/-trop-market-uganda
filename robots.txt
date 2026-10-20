@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# After editing sitemap.xml with your real website URL, add a line like:
+# Sitemap: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml
