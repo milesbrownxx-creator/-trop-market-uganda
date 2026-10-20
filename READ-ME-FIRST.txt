@@ -1,0 +1,24 @@
+TROP MARKET UGANDA — PWA ICON FIX
+Developer: Agona Peter
+
+WHAT THIS KIT DOES
+Your GitHub Pages website already contains index.html, manifest.webmanifest, and sw.js configured for an installable web app. The service worker's install cache also requests icons/icon-192.png and icons/icon-512.png. These two icon files were missing, which caused 404 errors and can stop the service worker from activating.
+
+FILES IN THIS ZIP
+- icons/icon-192.png
+- icons/icon-512.png
+
+UPLOAD USING YOUR SAMSUNG PHONE
+1. Download and extract this ZIP in My Files.
+2. Open https://github.com/milesbrownxx-creator/-trop-market-uganda in Chrome and sign in.
+3. In the repository, open the icons folder if it already exists. If it does not exist, use Add file > Create new file and name it icons/keep.txt, type `icons folder`, and commit. Then return to the repository.
+4. Use Add file > Upload files. Select icon-192.png and icon-512.png from the extracted icons folder. If GitHub's upload screen will not let you select both, upload one at a time. Make sure the destination folder is icons/ (not the root).
+5. Commit the changes to the main branch. Do not delete or replace index.html, manifest.webmanifest, or sw.js.
+6. Wait a minute, then test these addresses in Chrome:
+   https://milesbrownxx-creator.github.io/-trop-market-uganda/icons/icon-192.png
+   https://milesbrownxx-creator.github.io/-trop-market-uganda/icons/icon-512.png
+   Both should show the TROP icon, not a 404 page.
+7. Open the website in Chrome, refresh it, then tap the three dots. Choose Install app (or Add to Home screen). If Install app is not offered immediately, wait a minute, refresh again, and check in PWABuilder.
+
+IMPORTANT
+This ZIP contains the missing PWA icons, not an Android APK. It makes the existing website eligible for Chrome's installable web-app flow after you upload the files. The website's product/review services still depend on their existing configuration.
