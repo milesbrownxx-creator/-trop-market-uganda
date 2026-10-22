@@ -47,3 +47,33 @@ LATEST WEBSITE UPDATE — 22 OCTOBER 2026
 - Added product-specific sharing links, a shopping guide section, official Jumia Flash Sales and Official Stores shortcuts, and FAQs.
 - This website remains an independent product-discovery catalogue. Checkout, payment, delivery, seller systems, shared customer listings and returns are not operated by TROP Market.
 - Visitor reviews will be shared across devices only after the owner adds the Supabase PUBLIC publishable key and runs supabase_reviews.sql. Never use a secret/service-role key in the browser.
+
+
+JUMIA AFFILIATE TRACKING SETUP — 22 OCTOBER 2026
+
+TROP Market can now use a genuine approved affiliate tracking URL for each product.
+A normal https://www.jumia.ug product link does not by itself prove a referral and does
+not make TROP Market earn commission.
+
+1. Start at the official Jumia Uganda JForce website: https://jforce.jumia.ug/
+2. Sign up or sign in with your own Jumia account and review the programme's eligibility,
+   commission rules, eligible order conditions, and payout method. Never pay an unofficial
+   person who promises to activate commissions.
+3. From the programme dashboard, obtain the real tracking link format that Jumia approves
+   for your account. Ask JForce support whether your link can point to specific product pages.
+4. Edit affiliate-links.js and add the exact approved URL for each product ID. Examples of
+   product IDs are comments inside that file. Do not invent tracking query strings or place
+   passwords, secret API keys or payment details in the source code.
+5. After the site deploys, open TROP Market, refresh it, and tap a product. Products with
+   a valid configured tracking URL show “TRACKED LINK” and an affiliate disclosure in the
+   product-details panel. Products without one keep their normal Jumia link.
+
+Commission tracking will not be active until you are accepted into the official programme
+and the actual tracking URLs are configured and tested. A click is not a guaranteed commission;
+Jumia sets eligibility and normally confirms commission based on qualifying completed/delivered
+orders under its terms. This website cannot independently verify orders or promise earnings.
+
+Official Jumia information:
+- JForce Uganda: https://jforce.jumia.ug/
+- Jumia Group business services: https://group.jumia.com/about/business-services
+- Jumia Uganda: https://www.jumia.ug/
