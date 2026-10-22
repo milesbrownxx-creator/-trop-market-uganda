@@ -303,14 +303,14 @@
   function getProductOutboundUrl(p) {
     const links = window.TROP_AFFILIATE_LINKS || {};
     const candidate = p && (p.affiliateUrl || links[p.id]);
-    if (typeof candidate === 'string' && /^https?:\\/\\//i.test(candidate.trim())) return candidate.trim();
+    if (typeof candidate === 'string' && /^https?:\/\//i.test(candidate.trim())) return candidate.trim();
     const query = encodeURIComponent((p && (p.name || p.category)) || 'products');
     return (p && p.jumiaUrl) || ('https://www.jumia.ug/catalog/?q=' + query);
   }
   function hasAffiliateTracking(p) {
     const links = window.TROP_AFFILIATE_LINKS || {};
     const candidate = p && (p.affiliateUrl || links[p.id]);
-    return typeof candidate === 'string' && /^https?:\\/\\//i.test(candidate.trim());
+    return typeof candidate === 'string' && /^https?:\/\//i.test(candidate.trim());
   }
   function openJumiaProduct(id) {
     const p = products.find(x => x.id === id);
