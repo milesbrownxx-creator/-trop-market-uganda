@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trop-market-shell-v11-multivendor-marketplace';
+const CACHE_NAME = 'trop-market-shell-v12-network-first-pages';
 const APP_SHELL = ['./', './index.html', './supabase-config.js', './affiliate-links.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
@@ -8,7 +8,26 @@ self.addEventListener('activate', (event) => {
 });
 self.addEventListener('fetch', (event) => {
   const request = event.request;
-  if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
+  const url = new URL(request.url);
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+
+  // Always try the network first for page navigations so visitors see the newest GitHub Pages version.
+  const isPage = request.mode === 'navigate' || /\\.html?$/i.test(url.pathname);
+  if (isPage) {
+    event.respondWith(fetch(request, { cache: 'no-cache' }).then((response) => {
+      if (response && response.ok) {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(request, copy);
+          cache.put('./index.html', response.clone());
+        });
+      }
+      return response;
+    }).catch(() => caches.match(request).then((cached) => cached || caches.match('./index.html'))));
+    return;
+  }
+
+  // Static assets remain cache-first for faster visits, with online updates saved for next time.
   event.respondWith(caches.match(request).then((cached) => cached || fetch(request).then((response) => {
     if (response && response.ok) {
       const copy = response.clone();
