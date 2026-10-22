@@ -77,3 +77,16 @@ Official Jumia information:
 - JForce Uganda: https://jforce.jumia.ug/
 - Jumia Group business services: https://group.jumia.com/about/business-services
 - Jumia Uganda: https://www.jumia.ug/
+
+
+JFORCE DEFAULT AFFILIATE LINK — 22 OCTOBER 2026
+
+The owner supplied this general JForce affiliate link:
+https://jforce.jumia.ug/s/NimjUjJ
+
+TROP Market now uses this as the default destination for product shopping buttons when a
+product-specific affiliate URL has not been configured. This lets the visitor follow the
+owner's JForce link, but the general link may not take the visitor directly to the exact
+product they tapped. For the most relevant shopping experience, add product-specific links
+only when JForce provides them. Earnings are not guaranteed and depend on Jumia's tracking,
+eligibility rules and qualifying purchases.
