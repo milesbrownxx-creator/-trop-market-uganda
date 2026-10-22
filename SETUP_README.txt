@@ -90,3 +90,32 @@ owner's JForce link, but the general link may not take the visitor directly to t
 product they tapped. For the most relevant shopping experience, add product-specific links
 only when JForce provides them. Earnings are not guaranteed and depend on Jumia's tracking,
 eligibility rules and qualifying purchases.
+
+
+SHARED MARKETPLACE LISTINGS — 22 OCTOBER 2026
+
+The website is connected to the existing Supabase project using its PUBLIC publishable key.
+A publishable key is intended for browser apps; Row Level Security (RLS) and policies still
+control what visitors can read or submit. Never put a Supabase secret/service-role key in
+website code.
+
+Seller form workflow:
+1. A seller fills in the product name, price, category, description, shop name and optional contact/photo.
+2. TROP sends the listing to public.market_products with status=pending.
+3. Only records with status=approved are loaded into the public catalogue.
+4. For now, approve or reject submissions manually in Supabase Dashboard > Table Editor >
+   market_products by changing the status column. Do not approve listings until you have
+   checked the product and seller details.
+5. Images are stored as compressed data inside the listing row for this lightweight prototype.
+   For a large marketplace, move product images to Supabase Storage and add seller authentication,
+   upload limits and anti-spam protections.
+
+The current website's public review feature uses public.market_product_reviews, which is the
+existing table with text product IDs and review_text. New reviews are inserted as pending and
+only approved reviews should appear. The legacy public.product_reviews table may have a
+different schema; this page now uses market_product_reviews for the public catalogue.
+
+This completes shared listing submission and moderated public display, not a full Amazon-scale
+marketplace. Separate seller accounts, private buyer profiles, admin permissions, order
+management, payment processing, refunds, messaging and transaction notifications still need
+further implementation before TROP can operate as a complete multi-vendor commerce platform.
