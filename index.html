@@ -9,7 +9,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icons/icon-192.png">
-  <meta name="description" content="TROP Market Uganda by Agona Peter is a mobile-friendly shopping discovery marketplace for exploring product categories, catalogue details, community reviews, and retailer listings.">
+  <meta name="description" content="TROP Market Uganda is a marketplace project by Agona Peter, designed to connect shoppers with products and sellers. Retailer links and seller tools are available in a staged rollout.">
   <meta name="keywords" content="TROP Market Uganda, Uganda online shopping, Jumia Uganda products, electronics Uganda, phones Uganda, product reviews, Agona Peter">
   <meta name="author" content="Agona Peter">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -17,14 +17,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TROP Market Uganda">
   <meta property="og:url" content="./">
-  <meta property="og:title" content="TROP Market Uganda — Discover Great Finds">
-  <meta property="og:description" content="Discover selected Jumia Uganda listings, compare indicative price snapshots, save favourites and open the live retailer page to verify current details.">
+  <meta property="og:title" content="TROP Market Uganda — Discover Your Next Great Find">
+  <meta property="og:description" content="Explore product picks, browse categories and discover the TROP Market marketplace experience in Uganda.">
   <meta property="og:image" content="./icons/icon-512.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="TROP Market Uganda — Product Catalogue & Reviews">
-  <meta name="twitter:description" content="Discover selected Jumia Uganda listings and read customer product reviews.">
-  <script type="application/ld+json" id="tropWebSiteSchema">{"@context":"https://schema.org","@type":"WebSite","name":"TROP Market Uganda","alternateName":"TROP Market","description":"An independent product-discovery catalogue linking shoppers to selected Jumia Uganda listings and hosting customer reviews.","creator":{"@type":"Person","name":"Agona Peter"},"inLanguage":"en-UG"}</script>
-  <title>TROP Market Uganda — Product Catalogue & Reviews</title>
+  <meta name="twitter:title" content="TROP Market Uganda — Discover Your Next Great Find">
+  <meta name="twitter:description" content="Explore product picks, categories and the TROP Market marketplace experience in Uganda.">
+  <script type="application/ld+json" id="tropWebSiteSchema">{"@context":"https://schema.org","@type":"WebSite","name":"TROP Market Uganda","alternateName":"TROP Market","description":"A Uganda-focused marketplace project connecting shoppers with product discovery and staged seller tools. Some purchases currently continue on external retailer pages.","creator":{"@type":"Person","name":"Agona Peter"},"inLanguage":"en-UG"}</script>
+  <title>TROP Market Uganda — Online Marketplace</title>
   <style>
     :root{--navy:#101827;--navy2:#18253a;--ink:#172033;--muted:#677286;--line:#e5e9f0;--paper:#f5f7fb;--white:#fff;--teal:#16b8a6;--teal-dark:#078b80;--gold:#ffcb66;--radius:18px;--shadow:0 12px 35px rgba(18,31,52,.09)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.container{width:min(1200px,calc(100% - 36px));margin:auto}
@@ -54,7 +54,7 @@
     @media(max-width:900px){.catalog-group-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:620px){.catalog-group-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.catalog-group-head h3{font-size:16px}.catalog-group-icon{width:36px;height:36px}.catalog-view-all{padding:8px;font-size:10px}.catalog-group-head{gap:7px}.catalog-group{margin-top:3px}}
   /* This edition is a curated Jumia catalogue, not a seller-listing site. */
-    #openSellerTop,#heroSell,#sellerCtaButton,#sellerOverlay{display:none!important}
+    /* marketplace entry points are enabled in this edition */
     .cart-count{display:none!important}
     .add-cart{font-size:16px;width:auto;min-width:36px;padding:0 10px}
   
@@ -326,26 +326,113 @@
       .hero{padding-top:16px}
       .category{min-height:125px}
     }
+
+    /* 2026 multi-vendor marketplace visual system */
+    :root{--market-amber:#ffd16e;--market-orange:#ffb84d;--market-blue:#1e73be;--market-border:#e1e7ef}
+    .topbar{background:linear-gradient(90deg,#071326,#132a47 65%,#18384a)}
+    .topbar .container{min-height:34px;align-items:center;letter-spacing:.1px}
+    .masthead{background:linear-gradient(100deg,#071326 0%,#112943 64%,#102c3b 100%)}
+    .headrow{padding-top:15px;padding-bottom:15px}
+    .sell-head-action{background:linear-gradient(135deg,#ffe093,#ffbc56);color:#172337;border-color:#ffe4a8;box-shadow:0 5px 15px #ffca6633}
+    .sell-head-action:hover{background:linear-gradient(135deg,#ffedb8,#ffd06f);border-color:#ffdf92;color:#172337}
+    .navline .sell-link{color:#ffda83}
+    .marketplace-promo-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:linear-gradient(100deg,#fff5d9,#edf8ff 65%,#f0edff);border:1px solid #f0e4c4;border-radius:12px;padding:11px 16px;margin:0 0 13px;color:#26354d;font-size:12px}
+    .marketplace-promo-strip strong{letter-spacing:.8px;font-size:10px;color:#0e766f}
+    .marketplace-promo-strip span:last-child{color:#596980}
+    .promo-pulse{width:7px;height:7px;border-radius:50%;background:#0fb9a8;box-shadow:0 0 0 4px #0fb9a81c}
+    .hero-panel{background:radial-gradient(ellipse at 88% 2%,rgba(39,229,202,.23),transparent 36%),radial-gradient(ellipse at 78% 100%,rgba(115,92,255,.24),transparent 39%),linear-gradient(125deg,#071326 0%,#102540 52%,#132d48 100%)}
+    .hero-copy{max-width:650px}
+    .hero-proof-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;color:#b8cadb;font-size:10px;font-weight:700}
+    .hero-proof-row span{display:inline-flex;align-items:center;gap:5px}
+    .section-side-note{font-size:9px;font-weight:900;letter-spacing:1.3px;color:#68758b;border:1px solid #dbe5ef;background:#fff;border-radius:99px;padding:8px 10px;white-space:nowrap}
+    .marketplace-preview{margin:34px 0 30px}
+    .marketplace-section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:17px}
+    .section-kicker{display:block;color:#008f83;font-size:10px;font-weight:900;letter-spacing:1.4px;margin-bottom:9px}
+    .marketplace-section-head h2{margin:0;font-size:clamp(25px,3.2vw,35px);letter-spacing:-1.1px;line-height:1.1}
+    .marketplace-section-head p{max-width:640px;color:var(--muted);font-size:13px;line-height:1.7;margin:10px 0 0}
+    .roadmap-pill{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;background:#fff;border:1px solid #e0e7f0;border-radius:999px;padding:9px 12px;color:#64748b;font-size:9px;font-weight:900;letter-spacing:1px}
+    .roadmap-pill span{width:6px;height:6px;background:#ffba50;border-radius:50%}
+    .marketplace-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+    .marketplace-feature{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:255px;padding:19px;border-radius:19px;border:1px solid #e0e7f0;background:linear-gradient(160deg,#fff 0%,#fbfdff 100%);box-shadow:0 8px 24px rgba(21,42,74,.045);transition:transform .18s,box-shadow .18s,border-color .18s}
+    .marketplace-feature::after{content:"";position:absolute;right:-40px;top:-45px;width:100px;height:100px;border-radius:50%;background:rgba(82,210,198,.07);pointer-events:none}
+    .marketplace-feature:hover{transform:translateY(-3px);box-shadow:0 15px 33px rgba(21,42,74,.09);border-color:#b9e9e2}
+    .feature-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,#e0fff7,#e9edff);color:#087e83;font-size:22px;font-weight:900;margin-bottom:15px}
+    .feature-status{align-self:flex-start;border-radius:6px;padding:5px 7px;font-size:8px;font-weight:900;letter-spacing:.65px;margin-bottom:9px}
+    .status-planned{background:#f0f3f8;color:#66758b}
+    .status-preview{background:#e3faf3;color:#087c70}
+    .marketplace-feature h3{font-size:16px;line-height:1.3;letter-spacing:-.3px;margin:0 0 8px}
+    .marketplace-feature p{font-size:11px;line-height:1.7;color:#68768b;margin:0 0 18px}
+    .feature-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #edf1f6;padding-top:11px;margin-top:auto;color:#8290a3;font-size:10px;font-weight:700}
+    .feature-foot a{color:#087f78;font-weight:900}
+    .marketplace-notice{display:flex;align-items:flex-start;gap:10px;margin-top:14px;padding:13px 15px;border-radius:13px;background:#fff9e8;border:1px solid #f2e4b9;color:#715a2c}
+    .marketplace-notice-icon{display:grid;place-items:center;flex-shrink:0;border-radius:50%;width:21px;height:21px;background:#ffe8aa;color:#805a13;font-weight:900;font-size:12px}
+    .marketplace-notice p{font-size:11px;line-height:1.65;margin:0}
+    .marketplace-notice strong{color:#554016}
+    .seller-cta{background:radial-gradient(ellipse at 94% 7%,rgba(123,117,255,.14),transparent 38%),linear-gradient(120deg,#e4fff8,#f0f3ff 75%,#fff7e4);border-color:#d6e8ec}
+    #sellerOverlay{z-index:40}
+    @media(max-width:950px){.marketplace-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){
+      .marketplace-promo-strip{padding:10px 12px;gap:7px;font-size:10px}
+      .marketplace-promo-strip strong{font-size:9px}
+      .marketplace-section-head{align-items:flex-start;flex-direction:column;gap:12px}
+      .marketplace-section-head h2{font-size:26px}
+      .marketplace-section-head p{font-size:12px}
+      .marketplace-feature-grid{grid-template-columns:1fr 1fr;gap:9px}
+      .marketplace-feature{min-height:245px;padding:13px;border-radius:16px}
+      .feature-icon{width:37px;height:37px;font-size:19px;margin-bottom:12px}
+      .marketplace-feature h3{font-size:13px}
+      .marketplace-feature p{font-size:10px;line-height:1.6}
+      .feature-status{font-size:7px;letter-spacing:.3px}
+      .feature-foot{font-size:9px}
+      .section-side-note{display:none}
+      .hero-proof-row{gap:8px;font-size:9px}
+      .hero-proof-row span{flex:0 0 auto}
+      .head-actions{gap:6px}
+    }
+    @media(max-width:390px){.marketplace-feature-grid{grid-template-columns:1fr}.marketplace-feature{min-height:unset}.marketplace-feature p{font-size:11px}}
+
 </style>
 </head>
 <body>
   <noscript><div style="padding:16px;background:#fff7e5;color:#573d0a;text-align:center">TROP Market Uganda by Agona Peter. JavaScript is required to browse the interactive catalogue and submit reviews. You can visit <a href="https://www.jumia.ug/">Jumia Uganda</a> directly.</div></noscript>
-  <div class="topbar"><div class="container"><span>✦ TROP MARKET · YOUR EVERYDAY SHOPPING DISCOVERY</span><span>Great finds across categories · Verify prices with the retailer</span></div></div>
+  <div class="topbar"><div class="container"><span>✦ TROP MARKET UGANDA · YOUR MARKETPLACE STARTS HERE</span><span>Discover products · explore categories · grow with sellers</span></div></div>
   <header class="masthead">
     <div class="container headrow">
       <a class="brand" href="#home" aria-label="TROP Market home"><span class="brandmark">T</span><span>TROP <em>Market</em></span></a>
       <form class="searchbox" id="searchForm" role="search"><select id="searchCategory" aria-label="Search category"><option value="all">All categories</option><option>Electronics</option><option>Fashion</option><option>Home</option><option>Beauty</option><option>Sports</option><option>Other</option></select><input id="searchInput" type="search" placeholder="Search products, brands, and more…" aria-label="Search products"><button type="submit" aria-label="Search">⌕</button></form>
-      <div class="head-actions"><button class="head-action" id="openSellerTop" style="display:none">Sell</button><button class="head-action" id="openCart" aria-label="Open Jumia Uganda">🛍 <span class="long-label">Shop Jumia</span><span class="mobile-only">Jumia</span><span class="cart-count" id="cartCount" style="display:none">0</span></button></div>
+      <div class="head-actions"><button class="head-action sell-head-action" id="openSellerTop">＋ <span class="long-label">Sell on TROP</span><span class="mobile-only">Sell</span></button><button class="head-action" id="openCart" aria-label="Open shopping panel">🛍 <span class="long-label">My shopping</span><span class="mobile-only">Shop</span><span class="cart-count" id="cartCount" style="display:none">0</span></button></div>
     </div>
-    <div class="navline"><nav class="container"><a href="#products" data-nav-cat="all">Today's finds</a><a href="#categories">Categories</a><a href="#products" data-nav-cat="Electronics">Electronics</a><a href="#products" data-nav-cat="Fashion">Fashion</a><a href="#products" data-nav-cat="Home">Home & living</a><a href="https://www.jumia.ug/flash-sales/" target="_blank" rel="noopener noreferrer">Flash sales ↗</a><a href="https://www.jumia.ug/mlp-official-stores/" target="_blank" rel="noopener noreferrer">Official stores ↗</a><a class="sell-link" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Open Jumia Uganda ↗</a></nav></div>
+    <div class="navline"><nav class="container"><a href="#products" data-nav-cat="all">Explore products</a><a href="#categories">All categories</a><a href="#products" data-nav-cat="Electronics">Electronics</a><a href="#products" data-nav-cat="Fashion">Fashion</a><a href="#products" data-nav-cat="Home">Home & living</a><a href="https://www.jumia.ug/flash-sales/" target="_blank" rel="noopener noreferrer">Deals ↗</a><a href="#marketplace-preview">Marketplace features</a><a class="sell-link" href="#sell">Become a seller ↓</a></nav></div>
   </header>
   <main id="home" class="container">
-    <section class="hero"><div class="hero-panel"><div><span class="eyebrow">TROP Market × Jumia Uganda</span><h1>Your next great find<br><span style="color:#6ce5d2">starts right here.</span></h1><p>Explore handpicked finds across electronics, fashion, home and more. Compare catalogue details, read community reviews, then visit the retailer to check the latest price and availability.</p><div class="hero-buttons"><a class="btn btn-primary" href="#products">Explore products <span>↓</span></a><a class="btn btn-light" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Visit Jumia Uganda ↗</a></div></div><div class="hero-visual" aria-hidden="true"><div class="orb"></div><div class="hero-bag">🛍️</div><div class="floating-card float-one"><strong>Jumia listings</strong><small>Product pages linked directly</small></div><div class="floating-card float-two"><strong>Checkout on Jumia</strong><small>Review current price and stock there</small></div></div></div>
-      <div class="trust-row"><div class="trust-item"><div class="trust-icon">⌕</div><div><strong>Shop by category</strong><span>Find your next favourite</span></div></div><div class="trust-item"><div class="trust-icon">↗</div><div><strong>Retailer product links</strong><span>Go to the live listing</span></div></div><div class="trust-item"><div class="trust-icon">✓</div><div><strong>Shop on Jumia</strong><span>Confirm live price and availability</span></div></div></div>
+    <section class="hero">
+      <div class="marketplace-promo-strip"><span class="promo-pulse"></span><strong>WELCOME TO TROP MARKET</strong><span>Everyday finds. Fresh possibilities.</span></div>
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <span class="eyebrow">UGANDA'S MARKETPLACE EXPERIENCE</span>
+          <h1>Your next great find.<br><span style="color:#ffd16e">Starts right here.</span></h1>
+          <p>Explore products across popular categories, discover shopping offers and follow your favourite finds. TROP Market is growing toward a multi-vendor marketplace built for buyers and local sellers in Uganda.</p>
+          <div class="hero-buttons"><a class="btn btn-primary" href="#products">Explore products <span>↗</span></a><button class="btn btn-light" type="button" id="heroSell">Start selling on TROP <span>＋</span></button></div>
+          <div class="hero-proof-row"><span>✓ Phone-friendly browsing</span><span>✓ Product reviews</span><span>✓ Seller tools in progress</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true"><div class="orb"></div><div class="hero-bag">🛍️</div><div class="floating-card float-one"><strong>Discover more</strong><small>Shop across popular categories</small></div><div class="floating-card float-two"><strong>Built for Uganda</strong><small>A marketplace growing with you</small></div></div>
+      </div>
+      <div class="trust-row"><div class="trust-item"><div class="trust-icon">⌕</div><div><strong>Find your next pick</strong><span>Search and browse categories</span></div></div><div class="trust-item"><div class="trust-icon">♧</div><div><strong>Seller-first vision</strong><span>Tools for independent sellers are in development</span></div></div><div class="trust-item"><div class="trust-icon">↗</div><div><strong>Shop with clarity</strong><span>External retailer prices and checkout are clearly noted</span></div></div></div>
     </section>
-    <section id="categories"><div class="section-head"><div><h2>Shop by category</h2><p>Start with what you're looking for.</p></div></div><div class="categories" id="categoryGrid">
+    <section id="categories"><div class="section-head"><div><h2>Explore popular categories</h2><p>Start with a category and find something made for you.</p></div><span class="section-side-note">A LITTLE OF EVERYTHING</span></div><div class="categories" id="categoryGrid">
       <button class="category" data-category="Electronics"><span class="emoji">🎧</span><strong>Electronics</strong><small>Phones, gadgets</small></button><button class="category" data-category="Fashion"><span class="emoji">👟</span><strong>Fashion</strong><small>Style and footwear</small></button><button class="category" data-category="Home"><span class="emoji">🪴</span><strong>Home & living</strong><small>Make it feel right</small></button><button class="category" data-category="Beauty"><span class="emoji">✨</span><strong>Beauty</strong><small>Care and wellness</small></button><button class="category" data-category="Sports"><span class="emoji">⚽</span><strong>Sports</strong><small>Move and play</small></button><button class="category" data-category="Other"><span class="emoji">🎁</span><strong>More finds</strong><small>Everything else</small></button>
     </div></section>
+    <section id="marketplace-preview" class="marketplace-preview" aria-labelledby="marketplacePreviewHeading">
+      <div class="marketplace-section-head"><div><span class="section-kicker">MADE FOR BUYERS & SELLERS</span><h2 id="marketplacePreviewHeading">More than a shopping page.</h2><p>Our goal is to bring shoppers, independent vendors and useful marketplace tools together in one place.</p></div><span class="roadmap-pill"><span></span> PLATFORM ROADMAP</span></div>
+      <div class="marketplace-feature-grid">
+        <article class="marketplace-feature buyer-feature"><div class="feature-icon">♡</div><span class="feature-status status-planned">IN DEVELOPMENT</span><h3>A smoother buyer experience</h3><p>Wishlist, customer profiles, saved delivery details and order history are planned as account services are built.</p><div class="feature-foot"><span>For shoppers</span><span>↗</span></div></article>
+        <article class="marketplace-feature seller-feature"><div class="feature-icon">▣</div><span class="feature-status status-preview">SELLER PREVIEW</span><h3>Space for local sellers</h3><p>Seller registration, product uploads, stock tools and sales insights are part of the multi-vendor roadmap. The current listing form is a local preview, not a shared seller account.</p><div class="feature-foot"><span>For businesses</span><a href="#sell">See seller section ↓</a></div></article>
+        <article class="marketplace-feature admin-feature"><div class="feature-icon">⚙</div><span class="feature-status status-planned">IN DEVELOPMENT</span><h3>Admin & listing review</h3><p>A secure admin workspace will be needed to review vendors, moderate listings and manage promotions before these controls can go live.</p><div class="feature-foot"><span>For platform admins</span><span>↗</span></div></article>
+        <article class="marketplace-feature payments-feature"><div class="feature-icon">▤</div><span class="feature-status status-planned">NOT ACTIVE YET</span><h3>Payments built with care</h3><p>Mobile Money, secure checkout, refunds and commission splitting need a payment provider and server-side integration before TROP can handle transactions.</p><div class="feature-foot"><span>Secure commerce</span><span>↗</span></div></article>
+      </div>
+      <div class="marketplace-notice"><span class="marketplace-notice-icon">i</span><p><strong>What works today:</strong> browse and search the current catalogue, open product details, and use the retailer links. Shared buyer/seller accounts, a multi-vendor database, admin controls and TROP checkout are not active yet.</p></div>
+    </section>
+
     <section id="products">
 <section style="margin:34px 0">
   <div style="margin-bottom:18px">
@@ -435,7 +522,7 @@
   </p>
 </section>
 
-      <div class="notice" style="margin:18px 0 12px"><strong>Jumia Uganda catalogue:</strong> The products shown here were matched to Jumia Uganda product pages when this catalogue was prepared. Tap any product photo, name, or arrow to open that exact listing. Prices and stock can change, and Jumia may update or remove listings. TROP Market is an independent discovery page and is not owned by Jumia.</div><div class="section-head products-header"><div><h2 id="productsTitle">Discover popular finds</h2><p id="productsSubtitle">Browse the collection, explore product details and reviews, then continue to the retailer to purchase.</p></div><select class="sort-select" id="sortSelect" aria-label="Sort products"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="newest">Newest first</option></select></div><div class="product-grid" id="productGrid"></div></section>
+      <div class="notice" style="margin:18px 0 12px"><strong>Jumia Uganda catalogue:</strong> The products shown here were matched to Jumia Uganda product pages when this catalogue was prepared. Tap any product photo, name, or arrow to open that exact listing. Prices and stock can change, and Jumia may update or remove listings. TROP Market is an independent discovery page and is not owned by Jumia.</div><div class="section-head products-header"><div><h2 id="productsTitle">Featured product picks</h2><p id="productsSubtitle">Explore selected listings, open a product to read or write reviews, and follow the retailer link to verify current details.</p></div><select class="sort-select" id="sortSelect" aria-label="Sort products"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="newest">Newest first</option></select></div><div class="product-grid" id="productGrid"></div></section>
     <section class="how-it-works" aria-labelledby="howHeading">
       <div class="section-head"><div><h2 id="howHeading">A simpler way to discover products</h2><p>Find an item here, then verify the details with the actual retailer.</p></div></div>
       <div class="how-grid">
@@ -454,9 +541,9 @@
         <details><summary>Does TROP deliver products or offer returns?</summary><p>TROP does not store or deliver the linked items. Check Jumia's delivery coverage, charges and return eligibility for the product and location you choose.</p></details>
       </div>
     </section>
-    <section class="seller-cta" id="sell"><div><h2>Ready to shop?</h2><p>Open Jumia Uganda to review its current product prices, seller information, stock, delivery options and checkout.</p><div style="margin-top:18px"><a class="btn btn-primary" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Shop directly on Jumia ↗</a></div></div><div class="seller-illustration" aria-hidden="true">🛍️</div></section>
+    <section class="seller-cta" id="sell"><div><span class="section-kicker">FOR LOCAL BUSINESSES</span><h2>Have products to share?</h2><p>Bring your business idea to TROP Market. You can preview the product-listing form today; listings currently stay in this browser until shared seller accounts and the marketplace database are connected.</p><div style="margin-top:18px"><button class="btn btn-primary" id="sellerCtaButton" type="button">Preview seller listing form ＋</button></div></div><div class="seller-illustration" aria-hidden="true">🏪</div></section>
   </main>
-  <footer><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brandmark">T</span><span>TROP <em>Market</em></span></a><p>An independent product-discovery catalogue linking shoppers to Jumia Uganda product pages.</p></div><div class="footer-col"><strong>Explore</strong><a href="#products">Popular products</a><a href="#categories">Categories</a><a href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Shop on Jumia Uganda ↗</a></div><div class="footer-col"><strong>Marketplace info</strong><span>Jumia product links</span><span>Prices are snapshots and can change</span><span>Checkout is handled by Jumia</span></div></div><div class="footer-bottom"><span>© <span id="year"></span> TROP Market · Created by Agona Peter</span><span>Developer contact: <a href="mailto:milesbrownxx@gmail.com">milesbrownxx@gmail.com</a> · Discover. List. Shop.</span></div></div></footer>
+  <footer><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brandmark">T</span><span>TROP <em>Market</em></span></a><p>A Uganda-focused marketplace project by Agona Peter, growing toward a shared shopping and seller experience.</p></div><div class="footer-col"><strong>Explore</strong><a href="#products">Popular products</a><a href="#categories">Categories</a><a href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Shop on Jumia Uganda ↗</a></div><div class="footer-col"><strong>Marketplace info</strong><span>Jumia product links</span><span>Prices are snapshots and can change</span><span>Checkout is handled by Jumia</span></div></div><div class="footer-bottom"><span>© <span id="year"></span> TROP Market · Created by Agona Peter</span><span>Developer contact: <a href="mailto:milesbrownxx@gmail.com">milesbrownxx@gmail.com</a> · Discover. List. Shop.</span></div></div></footer>
 
   <div class="overlay" id="sellerOverlay" role="dialog" aria-modal="true" aria-labelledby="sellerTitle"><div class="modal"><div class="modal-head"><h2 id="sellerTitle">List a product</h2><button class="close" data-close="sellerOverlay" aria-label="Close">×</button></div><div class="modal-content"><div class="notice"><strong>Prototype notice:</strong> your listing is saved only in this browser on this device. It will not appear on other people's devices until a shared online database is connected.</div><form id="sellerForm"><div class="form-grid"><div class="field"><label for="productName">Product name *</label><input id="productName" name="productName" required maxlength="90" placeholder="e.g. Wireless headphones"></div><div class="field"><label for="productPrice">Price (UGX) *</label><input id="productPrice" name="productPrice" required type="number" min="1" step="1" placeholder="e.g. 85000"></div><div class="field"><label for="productCategory">Category *</label><select id="productCategory" name="productCategory" required><option value="">Choose a category</option><option>Electronics</option><option>Fashion</option><option>Home</option><option>Beauty</option><option>Sports</option><option>Other</option></select></div><div class="field"><label for="productCondition">Condition</label><select id="productCondition" name="productCondition"><option>New</option><option>Like new</option><option>Good</option><option>Used</option></select></div><div class="field"><label for="sellerName">Seller / business name *</label><input id="sellerName" name="sellerName" required maxlength="70" placeholder="Your shop name"></div><div class="field"><label for="sellerContact">Contact (optional)</label><input id="sellerContact" name="sellerContact" maxlength="60" placeholder="Phone or WhatsApp"></div><div class="field full"><label for="productDescription">Description *</label><textarea id="productDescription" name="productDescription" required maxlength="500" placeholder="Describe the item, its condition, size, features, or delivery details…"></textarea></div><div class="field"><label for="productImage">Product photo</label><input id="productImage" name="productImage" type="file" accept="image/*"><span class="help">Optional. JPG, PNG or WebP; choose a clear photo.</span></div><div class="field"><label>Photo preview</label><div class="preview" id="imagePreview">📷</div><span class="help" id="imageStatus">You can add a photo or publish without one.</span></div></div><div class="form-actions"><button type="button" class="btn btn-outline" data-close="sellerOverlay">Cancel</button><button type="submit" class="btn btn-primary">Publish listing ↗</button></div></form></div></div></div>
 
