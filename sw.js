@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trop-market-shell-v9-jforce-default-link';
+const CACHE_NAME = 'trop-market-shell-v10-aurora-2026-theme';
 const APP_SHELL = ['./', './index.html', './supabase-config.js', './affiliate-links.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
