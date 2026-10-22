@@ -83,6 +83,217 @@
 
     .affiliate-disclosure{margin:10px 0 0;background:#e8f8ee;border:1px solid #b8e6c5;border-radius:11px;padding:11px 12px;font-size:11px;line-height:1.6;color:#176638}
 
+
+    /* TROP Market 2026 visual refresh — aurora gradients, soft depth, mobile polish */
+    :root{
+      --navy:#081326;
+      --navy2:#13243d;
+      --ink:#111c31;
+      --muted:#637189;
+      --line:#e2e9f3;
+      --paper:#f3f7fc;
+      --white:#fff;
+      --teal:#36e0c2;
+      --teal-dark:#008f83;
+      --gold:#ffd16e;
+      --radius:20px;
+      --shadow:0 18px 46px rgba(20,36,65,.10)
+    }
+    html{scroll-padding-top:18px}
+    body{
+      background-color:#f3f7fc;
+      background-image:
+        radial-gradient(ellipse at 4% 8%,rgba(65,219,197,.12),transparent 30rem),
+        radial-gradient(ellipse at 95% 19%,rgba(125,113,255,.10),transparent 32rem),
+        radial-gradient(ellipse at 45% 75%,rgba(81,169,255,.07),transparent 35rem),
+        linear-gradient(180deg,#f7faff 0%,#f0f5fb 48%,#f8faff 100%);
+      background-attachment:fixed;
+      color:var(--ink)
+    }
+    .topbar{background:linear-gradient(90deg,#06101f,#14223a 55%,#082c37);color:#c7d7eb}
+    .masthead{
+      background:linear-gradient(110deg,rgba(7,18,36,.98),rgba(17,31,55,.98) 60%,rgba(8,43,53,.98));
+      box-shadow:0 8px 28px rgba(4,14,30,.12)
+    }
+    .brand{letter-spacing:-.9px}
+    .brandmark{
+      background:linear-gradient(135deg,#53f2d4 0%,#42cafa 52%,#a9a0ff 100%);
+      color:#062236;
+      border-radius:15px;
+      box-shadow:0 7px 24px rgba(59,218,207,.26),inset 0 1px 0 rgba(255,255,255,.55)
+    }
+    .searchbox{
+      border-radius:15px;
+      box-shadow:0 5px 18px rgba(3,12,27,.12);
+      transition:border-color .2s,box-shadow .2s
+    }
+    .searchbox:focus-within{box-shadow:0 0 0 4px rgba(54,224,194,.16),0 8px 22px rgba(3,12,27,.16)}
+    .searchbox button{background:linear-gradient(135deg,#ffe18a,#ffc75f);transition:filter .2s}
+    .searchbox button:hover{filter:saturate(1.15) brightness(1.02)}
+    .head-action{border-color:#41516b;background:rgba(255,255,255,.035)}
+    .head-action:hover{background:rgba(54,224,194,.10);border-color:#36e0c2}
+    .navline{border-top-color:rgba(217,231,248,.13)}
+    .navline .container{scrollbar-width:none}
+    .navline a{transition:color .18s}
+    .hero-panel{
+      isolation:isolate;
+      background:
+        radial-gradient(ellipse at 88% 2%,rgba(39,229,202,.26),transparent 36%),
+        radial-gradient(ellipse at 78% 100%,rgba(115,92,255,.33),transparent 39%),
+        radial-gradient(ellipse at 0% 100%,rgba(31,103,164,.18),transparent 42%),
+        linear-gradient(125deg,#071326 0%,#102540 48%,#132d48 72%,#101a35 100%);
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:30px;
+      box-shadow:0 26px 68px rgba(10,27,54,.19),inset 0 1px 0 rgba(255,255,255,.08)
+    }
+    .hero-panel:before{
+      width:390px;height:390px;right:2%;top:-130px;
+      border:1px solid rgba(130,243,231,.18);
+      box-shadow:0 0 0 28px rgba(81,217,208,.025),0 0 0 60px rgba(137,117,255,.025)
+    }
+    .hero-panel:after{
+      width:255px;height:255px;right:13%;top:-60px;
+      border-color:rgba(185,179,255,.24)
+    }
+    .hero-panel > div:first-child{position:relative;z-index:2}
+    .eyebrow{
+      background:rgba(96,241,214,.09);
+      border:1px solid rgba(96,241,214,.20);
+      padding:8px 12px;border-radius:999px;
+      letter-spacing:1.25px
+    }
+    .eyebrow:before{height:6px;width:6px;border-radius:50%;box-shadow:0 0 14px #65f3da}
+    h1{letter-spacing:-2.4px;text-wrap:balance}
+    .hero p{color:#d1ddef}
+    .btn{transition:transform .18s,box-shadow .18s,filter .18s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg,#53f2d4,#2bc9c5 55%,#4bbbea);
+      color:#06253a;
+      box-shadow:0 8px 23px rgba(45,219,202,.18)
+    }
+    .btn-primary:hover{background:linear-gradient(135deg,#8cffe9,#48e2d5);box-shadow:0 12px 26px rgba(45,219,202,.25)}
+    .btn-light{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    .hero-visual .orb{
+      background:radial-gradient(circle at 28% 22%,#85ffe5 0%,#27cfc4 24%,#278ab4 53%,#6859d9 78%,#222e68 100%);
+      opacity:.95;
+      filter:drop-shadow(0 22px 38px rgba(35,202,201,.23))
+    }
+    .hero-bag{filter:drop-shadow(0 20px 18px rgba(1,11,28,.38));transform:rotate(-7deg);animation:tropFloat 5s ease-in-out infinite}
+    .floating-card{
+      background:rgba(17,35,61,.68);
+      border-color:rgba(220,244,255,.21);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      box-shadow:0 18px 38px rgba(1,9,23,.24),inset 0 1px 0 rgba(255,255,255,.10)
+    }
+    .float-one{right:1%}
+    .float-two{left:0}
+    .trust-row{gap:14px}
+    .trust-item{
+      background:rgba(255,255,255,.82);
+      border-color:rgba(221,231,244,.92);
+      border-radius:18px;
+      box-shadow:0 8px 24px rgba(24,43,73,.045);
+      transition:transform .2s,box-shadow .2s,border-color .2s
+    }
+    .trust-item:hover{transform:translateY(-2px);border-color:#b7e9e2;box-shadow:0 12px 28px rgba(24,43,73,.08)}
+    .trust-icon{background:linear-gradient(135deg,#e2fff8,#e9f2ff);color:#087d82}
+    .section-head h2{letter-spacing:-.9px}
+    .section-head h2:after{
+      content:"";display:block;width:42px;height:3px;border-radius:5px;margin-top:10px;
+      background:linear-gradient(90deg,#2ddcc3,#7b85ff)
+    }
+    .categories{gap:14px}
+    .category{
+      position:relative;overflow:hidden;
+      background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(247,250,255,.96));
+      border-color:#e0e8f3;border-radius:19px;
+      box-shadow:0 7px 22px rgba(25,45,79,.045)
+    }
+    .category:after{
+      content:"";position:absolute;width:72px;height:72px;right:-33px;top:-33px;border-radius:50%;
+      background:rgba(69,219,201,.08);pointer-events:none
+    }
+    .category:hover,.category.active{border-color:#8bded3;box-shadow:0 13px 30px rgba(13,137,130,.12);background:#fff}
+    .category .emoji{background:linear-gradient(145deg,#e2fff8,#edf0ff);box-shadow:inset 0 1px 0 #fff}
+    .products-header{align-items:center}
+    .product-grid{gap:18px}
+    .product-card{
+      border-color:rgba(222,231,243,.95);
+      border-radius:20px;
+      box-shadow:0 8px 26px rgba(18,36,68,.055);
+      transition:transform .22s,border-color .22s,box-shadow .22s
+    }
+    .product-card:hover{
+      transform:translateY(-5px);
+      border-color:#a7e5dc;
+      box-shadow:0 20px 42px rgba(20,45,78,.13)
+    }
+    .product-image{background:linear-gradient(145deg,#f0f6ff,#e7f5f5 54%,#f3f0ff)}
+    .product-image img{transition:transform .35s}
+    .product-card:hover .product-image img{transform:scale(1.035)}
+    .product-tag{box-shadow:0 3px 12px rgba(8,28,40,.07);backdrop-filter:blur(8px)}
+    .heart{box-shadow:0 3px 12px rgba(8,28,40,.08);transition:transform .18s,color .18s}
+    .heart:hover{transform:scale(1.08)}
+    .product-body{background:linear-gradient(180deg,#fff,#fcfdff)}
+    .condition{background:#f0f5fb}
+    .add-cart{background:linear-gradient(135deg,#132b46,#071628);border-radius:12px;box-shadow:0 5px 12px rgba(7,22,40,.13)}
+    .add-cart:hover{background:linear-gradient(135deg,#067f7b,#0c9a95)}
+    .catalog-group-head{border-bottom-color:#dce7f3}
+    .catalog-group-icon{background:linear-gradient(135deg,#dffcf5,#e9edff);box-shadow:inset 0 1px 0 #fff}
+    .catalog-view-all{border-color:#dce8f2;background:linear-gradient(135deg,#fff,#f5faff)}
+    .catalog-view-all:hover{background:#e8fbf7;border-color:#7ddbd0}
+    .seller-cta{
+      position:relative;overflow:hidden;
+      background:
+        radial-gradient(ellipse at 95% 10%,rgba(110,119,255,.16),transparent 40%),
+        radial-gradient(ellipse at 0% 100%,rgba(47,222,196,.19),transparent 45%),
+        linear-gradient(115deg,#e3fff8,#f3f5ff 70%,#f4f9ff);
+      border-color:#cdebe9;border-radius:26px;
+      box-shadow:0 16px 40px rgba(24,51,80,.07)
+    }
+    .seller-illustration{filter:drop-shadow(0 10px 10px rgba(53,110,142,.15))}
+    .how-card{
+      border-color:#e1e9f4;border-radius:20px;
+      box-shadow:0 8px 25px rgba(21,42,74,.045);
+      transition:transform .2s,box-shadow .2s,border-color .2s
+    }
+    .how-card:hover{transform:translateY(-3px);border-color:#b1e6e0;box-shadow:0 15px 32px rgba(21,42,74,.09)}
+    .how-icon{background:linear-gradient(135deg,#dffdf6,#ebefff)}
+    .faq-list details{border-color:#e1e9f4;box-shadow:0 5px 18px rgba(21,42,74,.035)}
+    .faq-list summary::marker{color:#09a99b}
+    footer{
+      background:
+        radial-gradient(ellipse at 85% 0%,rgba(65,192,189,.15),transparent 38%),
+        linear-gradient(115deg,#06101f 0%,#102039 55%,#102f3c 100%);
+      border-top:1px solid rgba(255,255,255,.08)
+    }
+    .footer-bottom{border-top-color:rgba(207,225,248,.15)}
+    .footer-col a:hover{color:#71efdc}
+    .modal{border:1px solid rgba(255,255,255,.7);box-shadow:0 28px 90px rgba(3,13,29,.30)}
+    .toast{background:linear-gradient(110deg,#0a1a30,#13334a);border:1px solid rgba(121,231,217,.22)}
+    @keyframes tropFloat{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-8px) rotate(-5deg)}}
+    @media(max-width:640px){
+      body{background-attachment:scroll}
+      .hero-panel{border-radius:24px;box-shadow:0 19px 40px rgba(10,27,54,.17)}
+      .hero-panel:before{width:245px;height:245px;right:-23px;top:-73px}
+      .hero-panel:after{width:165px;height:165px;right:12%;top:-24px}
+      h1{letter-spacing:-1.7px}
+      .hero-visual{overflow:visible}
+      .hero-bag{animation:none}
+      .trust-row{gap:8px}
+      .trust-item{box-shadow:0 6px 16px rgba(24,43,73,.04)}
+      .categories{gap:9px}
+      .product-grid{gap:11px}
+      .product-card{border-radius:16px}
+      .product-image{background:linear-gradient(145deg,#f0f6ff,#e7f5f5 54%,#f3f0ff)}
+      .seller-cta{border-radius:20px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
   </style>
 </head>
 <body>
