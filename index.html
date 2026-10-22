@@ -605,7 +605,7 @@
     if(sort==='low') items.sort((a,b)=>a.price-b.price); else if(sort==='high') items.sort((a,b)=>b.price-a.price); else if(sort==='newest') items.sort((a,b)=>b.created-a.created); else items.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0) || b.created-a.created);
     const categoryNames={Electronics:'Electronics',Fashion:'Fashion',Home:'Home & living',Beauty:'Beauty',Sports:'Sports',Other:'More finds'};
     $('productsTitle').textContent=currentQuery?`Jumia results in this catalogue for “${currentQuery}”`:currentCategory==='all'?'Featured product picks':categoryNames[currentCategory]||`${currentCategory} products`;
-    $('productsSubtitle').textContent=currentCategory==='all'&&!currentQuery?`${items.length} product picks across ${new Set(items.map(p=>p.category)).size} categories · retailer prices may change`:`${items.length} ${items.length===1?'item':'items'} · tap to open its Jumia Uganda product page`;
+    $('productsSubtitle').textContent=currentCategory==='all'&&!currentQuery?`${items.length} product picks across ${new Set(items.map(p=>p.category)).size} categories · retailer prices may change`:`${items.length} ${items.length===1?'item':'items'} · tap a product for details and available actions`;
     if(!items.length){
       $('productGrid').innerHTML=`<div class="empty"><strong>No products found yet</strong>Try another search or category, or be the first to <button class="section-link" id="emptySell">list a product</button>.</div>`;
     } else if(currentCategory==='all'&&!currentQuery){
@@ -650,6 +650,7 @@
   function openJumiaProduct(id) {
     const p = products.find(x => x.id === id);
     if (!p) return;
+    if (isTropListing(p)) { showDetail(id); return; }
     const jumiaUrl = getProductOutboundUrl(p);
     // Open from the user's tap. If the browser blocks a new tab, navigate this tab instead.
     const opened = window.open(jumiaUrl, '_blank');
@@ -711,7 +712,7 @@
     if(!ids.length)return;
     try{
       const params=new URLSearchParams({select:'product_id,rating',status:'eq.approved',product_id:'in.('+ids.join(',')+')',limit:'1000'});
-      const response=await reviewsRequest('product_reviews?'+params.toString());
+      const response=await reviewsRequest('market_product_reviews?'+params.toString());
       const rows=await response.json();renderReviewSummary(Array.isArray(rows)?rows:[]);
     }catch(e){console.warn('TROP reviews could not load. Configure Supabase and run supabase_reviews.sql.');}
   }
@@ -731,7 +732,7 @@
     list.innerHTML='<div class="review-empty">Loading published reviews…</div>';
     try{
       const params=new URLSearchParams({select:'reviewer_name,rating,review_text,created_at',product_id:'eq.'+productId,status:'eq.approved',order:'created_at.desc',limit:'100'});
-      const response=await reviewsRequest('product_reviews?'+params.toString());
+      const response=await reviewsRequest('market_product_reviews?'+params.toString());
       const rows=await response.json();
       const arr=Array.isArray(rows)?rows:[];
       const avg=arr.length?arr.reduce((sum,r)=>sum+Number(r.rating||0),0)/arr.length:0;
@@ -750,7 +751,7 @@
     const tropListing=isTropListing(p);
     const jumiaUrl=getProductOutboundUrl(p);
     const trackedAffiliate=hasAffiliateTracking(p);
-    const contactHref=String(p.contact||'').replace(/[^\\d+]/g,'');
+    const contactHref=String(p.contact||'').split('').filter(ch => (ch>='0' && ch<='9') || ch==='+').join('');
     const detailPriceNote=tropListing
       ? 'This is a seller-submitted TROP Market listing. Confirm the item condition, final price and delivery arrangements directly with the seller before paying.'
       : (p.priceChecked?'Price snapshot last checked: '+escapeHtml(p.priceChecked)+'.':'This is an indicative price snapshot, not a live price feed.')+' Always confirm the current price, available options, seller, warranty and delivery on Jumia before buying.';
@@ -783,7 +784,7 @@
     if(!getSupabaseConfig()){feedback.textContent='Reviews are not connected yet. Follow SETUP_README.txt to add the publishable key and create the review table.';feedback.classList.add('error');return;}
     submit.disabled=true;submit.textContent='Submitting…';feedback.classList.remove('error');feedback.textContent='Sending your review…';
     try{
-      await reviewsRequest('product_reviews',{method:'POST',headers:{'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({product_id:productId,reviewer_name:reviewerName,rating,review_text:reviewText})});
+      await reviewsRequest('market_product_reviews',{method:'POST',headers:{'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({product_id:productId,reviewer_name:reviewerName,rating,review_text:reviewText})});
       form.reset();feedback.textContent='Thank you! Your review was submitted and will appear after the site owner approves it.';toast('Review submitted for approval.');
     }catch(err){
       feedback.textContent='Could not submit your review. The review table may not be set up yet. Please try again later.';feedback.classList.add('error');
