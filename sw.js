@@ -12,14 +12,14 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
 
   // Always try the network first for page navigations so visitors see the newest GitHub Pages version.
-  const isPage = request.mode === 'navigate' || /\\.html?$/i.test(url.pathname);
+  const isPage = request.mode === 'navigate' || url.pathname.toLowerCase().endsWith('.html') || url.pathname.toLowerCase().endsWith('.htm');
   if (isPage) {
     event.respondWith(fetch(request, { cache: 'no-cache' }).then((response) => {
       if (response && response.ok) {
         const copy = response.clone();
         caches.open(CACHE_NAME).then((cache) => {
           cache.put(request, copy);
-          cache.put('./index.html', response.clone());
+          cache.put(new URL('./index.html', self.location.href).href, response.clone());
         });
       }
       return response;
