@@ -40,3 +40,10 @@ SEO NOTES
 
 PUBLISHING ON GITHUB PAGES
 Upload/replace index.html, supabase-config.js, sw.js, manifest.webmanifest, robots.txt, sitemap.xml, supabase_reviews.sql, SETUP_README.txt, and the icons/ folder. Keep all files in the repository root except the icon files in icons/.
+
+LATEST WEBSITE UPDATE — 22 OCTOBER 2026
+- Added current Jumia catalogue snapshots for Samsung Galaxy A06, Oraimo Traveler 15 power bank, Tankoo jug set, and Hoffmans blender.
+- Product cards display indicative price snapshots and discount comparisons where a reference price was shown. Jumia prices and availability can change; visitors must confirm the live product page.
+- Added product-specific sharing links, a shopping guide section, official Jumia Flash Sales and Official Stores shortcuts, and FAQs.
+- This website remains an independent product-discovery catalogue. Checkout, payment, delivery, seller systems, shared customer listings and returns are not operated by TROP Market.
+- Visitor reviews will be shared across devices only after the owner adds the Supabase PUBLIC publishable key and runs supabase_reviews.sql. Never use a secret/service-role key in the browser.
