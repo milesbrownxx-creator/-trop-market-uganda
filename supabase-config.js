@@ -5,5 +5,5 @@
  */
 window.TROP_SUPABASE_CONFIG = {
   url: "https://hmzoiftmlwsdnkkbvfsf.supabase.co",
-  publishableKey: "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE"
+  publishableKey: "sb_publishable_wSMrhm8tgb6o6V3s_eV1-Q_wYTe5fim"
 };
