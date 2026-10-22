@@ -9,7 +9,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icons/icon-192.png">
-  <meta name="description" content="TROP Market Uganda by Agona Peter helps shoppers discover selected Jumia Uganda products, compare catalogue details, read customer reviews, and visit the matching Jumia listing.">
+  <meta name="description" content="TROP Market Uganda by Agona Peter is a mobile-friendly shopping discovery marketplace for exploring product categories, catalogue details, community reviews, and retailer listings.">
   <meta name="keywords" content="TROP Market Uganda, Uganda online shopping, Jumia Uganda products, electronics Uganda, phones Uganda, product reviews, Agona Peter">
   <meta name="author" content="Agona Peter">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TROP Market Uganda">
   <meta property="og:url" content="./">
-  <meta property="og:title" content="TROP Market Uganda — Product Catalogue & Reviews">
+  <meta property="og:title" content="TROP Market Uganda — Discover Great Finds">
   <meta property="og:description" content="Discover selected Jumia Uganda listings, compare indicative price snapshots, save favourites and open the live retailer page to verify current details.">
   <meta property="og:image" content="./icons/icon-512.png">
   <meta name="twitter:card" content="summary">
@@ -294,11 +294,43 @@
       html{scroll-behavior:auto}
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
     }
-  </style>
+  
+    /* Marketplace-inspired layout polish: stronger retail hierarchy and warm deal accents */
+    .topbar{background:linear-gradient(90deg,#06101f,#12223a 60%,#163646)}
+    .topbar .container{min-height:34px;align-items:center}
+    .masthead{background:linear-gradient(115deg,#081426 0%,#12243d 62%,#123846 100%)}
+    .hero{padding-top:28px}
+    .hero-panel{
+      background:
+        radial-gradient(ellipse at 92% 0%,rgba(255,190,83,.22),transparent 29%),
+        radial-gradient(ellipse at 78% 100%,rgba(39,224,196,.22),transparent 37%),
+        linear-gradient(120deg,#071326 0%,#102540 56%,#123547 100%);
+    }
+    .hero-panel .eyebrow{color:#8ff6e4}
+    .hero-panel .btn-primary{background:linear-gradient(135deg,#ffe08a,#ffc34d);color:#19243a;box-shadow:0 8px 23px rgba(255,196,77,.18)}
+    .hero-panel .btn-primary:hover{background:linear-gradient(135deg,#ffe9ad,#ffd16e)}
+    .hero-panel .btn-light{background:rgba(255,255,255,.96)}
+    .section-head{gap:16px}
+    .section-head p{max-width:680px}
+    .category{min-height:148px}
+    .category strong{letter-spacing:-.2px}
+    .product-card{overflow:hidden}
+    .product-tag{background:linear-gradient(135deg,#fff1cf,#ffe0a0);color:#75470b}
+    .price{color:#0a766d}
+    .catalog-view-all{color:#087e78}
+    .notice{border-radius:14px}
+    .review-shop{background:linear-gradient(110deg,#078f83,#12b6a5)}
+    .footer-brand .brandmark{background:linear-gradient(135deg,#ffe08a,#ffc34d);color:#18253a}
+    @media(max-width:640px){
+      .topbar .container{align-items:flex-start;flex-direction:column;gap:3px;padding:8px 0}
+      .hero{padding-top:16px}
+      .category{min-height:125px}
+    }
+</style>
 </head>
 <body>
   <noscript><div style="padding:16px;background:#fff7e5;color:#573d0a;text-align:center">TROP Market Uganda by Agona Peter. JavaScript is required to browse the interactive catalogue and submit reviews. You can visit <a href="https://www.jumia.ug/">Jumia Uganda</a> directly.</div></noscript>
-  <div class="topbar"><div class="container"><span>✦ TROP Market Uganda · independent shopping guide</span><span>Check every live price before you buy</span></div></div>
+  <div class="topbar"><div class="container"><span>✦ TROP MARKET · YOUR EVERYDAY SHOPPING DISCOVERY</span><span>Great finds across categories · Verify prices with the retailer</span></div></div>
   <header class="masthead">
     <div class="container headrow">
       <a class="brand" href="#home" aria-label="TROP Market home"><span class="brandmark">T</span><span>TROP <em>Market</em></span></a>
@@ -308,8 +340,8 @@
     <div class="navline"><nav class="container"><a href="#products" data-nav-cat="all">Today's finds</a><a href="#categories">Categories</a><a href="#products" data-nav-cat="Electronics">Electronics</a><a href="#products" data-nav-cat="Fashion">Fashion</a><a href="#products" data-nav-cat="Home">Home & living</a><a href="https://www.jumia.ug/flash-sales/" target="_blank" rel="noopener noreferrer">Flash sales ↗</a><a href="https://www.jumia.ug/mlp-official-stores/" target="_blank" rel="noopener noreferrer">Official stores ↗</a><a class="sell-link" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Open Jumia Uganda ↗</a></nav></div>
   </header>
   <main id="home" class="container">
-    <section class="hero"><div class="hero-panel"><div><span class="eyebrow">TROP Market × Jumia Uganda</span><h1>Discover products.<br><span style="color:#6ce5d2">Shop on Jumia.</span></h1><p>Browse selected products that have direct Jumia Uganda product pages. Tap a product to check the latest price, seller, stock and delivery options on Jumia.</p><div class="hero-buttons"><a class="btn btn-primary" href="#products">Explore Jumia products <span>↗</span></a><a class="btn btn-light" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Visit Jumia Uganda ↗</a></div></div><div class="hero-visual" aria-hidden="true"><div class="orb"></div><div class="hero-bag">🛍️</div><div class="floating-card float-one"><strong>Jumia listings</strong><small>Product pages linked directly</small></div><div class="floating-card float-two"><strong>Checkout on Jumia</strong><small>Review current price and stock there</small></div></div></div>
-      <div class="trust-row"><div class="trust-item"><div class="trust-icon">⌕</div><div><strong>Browse by category</strong><span>Find products faster</span></div></div><div class="trust-item"><div class="trust-icon">↗</div><div><strong>Direct Jumia links</strong><span>Open the product listing</span></div></div><div class="trust-item"><div class="trust-icon">✓</div><div><strong>Shop on Jumia</strong><span>Confirm live price and availability</span></div></div></div>
+    <section class="hero"><div class="hero-panel"><div><span class="eyebrow">TROP Market × Jumia Uganda</span><h1>Your next great find<br><span style="color:#6ce5d2">starts right here.</span></h1><p>Explore handpicked finds across electronics, fashion, home and more. Compare catalogue details, read community reviews, then visit the retailer to check the latest price and availability.</p><div class="hero-buttons"><a class="btn btn-primary" href="#products">Explore products <span>↓</span></a><a class="btn btn-light" href="https://www.jumia.ug/" target="_blank" rel="noopener noreferrer">Visit Jumia Uganda ↗</a></div></div><div class="hero-visual" aria-hidden="true"><div class="orb"></div><div class="hero-bag">🛍️</div><div class="floating-card float-one"><strong>Jumia listings</strong><small>Product pages linked directly</small></div><div class="floating-card float-two"><strong>Checkout on Jumia</strong><small>Review current price and stock there</small></div></div></div>
+      <div class="trust-row"><div class="trust-item"><div class="trust-icon">⌕</div><div><strong>Shop by category</strong><span>Find your next favourite</span></div></div><div class="trust-item"><div class="trust-icon">↗</div><div><strong>Retailer product links</strong><span>Go to the live listing</span></div></div><div class="trust-item"><div class="trust-icon">✓</div><div><strong>Shop on Jumia</strong><span>Confirm live price and availability</span></div></div></div>
     </section>
     <section id="categories"><div class="section-head"><div><h2>Shop by category</h2><p>Start with what you're looking for.</p></div></div><div class="categories" id="categoryGrid">
       <button class="category" data-category="Electronics"><span class="emoji">🎧</span><strong>Electronics</strong><small>Phones, gadgets</small></button><button class="category" data-category="Fashion"><span class="emoji">👟</span><strong>Fashion</strong><small>Style and footwear</small></button><button class="category" data-category="Home"><span class="emoji">🪴</span><strong>Home & living</strong><small>Make it feel right</small></button><button class="category" data-category="Beauty"><span class="emoji">✨</span><strong>Beauty</strong><small>Care and wellness</small></button><button class="category" data-category="Sports"><span class="emoji">⚽</span><strong>Sports</strong><small>Move and play</small></button><button class="category" data-category="Other"><span class="emoji">🎁</span><strong>More finds</strong><small>Everything else</small></button>
@@ -317,8 +349,8 @@
     <section id="products">
 <section style="margin:34px 0">
   <div style="margin-bottom:18px">
-    <h2>Browse More Real Products</h2>
-    <p>Discover thousands of live shopping listings through Jumia Uganda.</p>
+    <h2>Explore the wider marketplace</h2>
+    <p>Explore more products from the Jumia Uganda catalogue.</p>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px">
@@ -403,7 +435,7 @@
   </p>
 </section>
 
-      <div class="notice" style="margin:18px 0 12px"><strong>Jumia Uganda catalogue:</strong> The products shown here were matched to Jumia Uganda product pages when this catalogue was prepared. Tap any product photo, name, or arrow to open that exact listing. Prices and stock can change, and Jumia may update or remove listings. TROP Market is an independent discovery page and is not owned by Jumia.</div><div class="section-head products-header"><div><h2 id="productsTitle">Jumia Uganda product catalogue</h2><p id="productsSubtitle">Selected Jumia listings · open a product to read or write reviews, or use Shop on Jumia to buy.</p></div><select class="sort-select" id="sortSelect" aria-label="Sort products"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="newest">Newest first</option></select></div><div class="product-grid" id="productGrid"></div></section>
+      <div class="notice" style="margin:18px 0 12px"><strong>Jumia Uganda catalogue:</strong> The products shown here were matched to Jumia Uganda product pages when this catalogue was prepared. Tap any product photo, name, or arrow to open that exact listing. Prices and stock can change, and Jumia may update or remove listings. TROP Market is an independent discovery page and is not owned by Jumia.</div><div class="section-head products-header"><div><h2 id="productsTitle">Discover popular finds</h2><p id="productsSubtitle">Browse the collection, explore product details and reviews, then continue to the retailer to purchase.</p></div><select class="sort-select" id="sortSelect" aria-label="Sort products"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="newest">Newest first</option></select></div><div class="product-grid" id="productGrid"></div></section>
     <section class="how-it-works" aria-labelledby="howHeading">
       <div class="section-head"><div><h2 id="howHeading">A simpler way to discover products</h2><p>Find an item here, then verify the details with the actual retailer.</p></div></div>
       <div class="how-grid">
